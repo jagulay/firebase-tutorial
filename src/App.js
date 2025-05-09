@@ -7,6 +7,7 @@ import {
   signOut,
   onAuthStateChanged
 } from "firebase/auth";
+import Home from './Home';
 
 
 function App() {
@@ -51,10 +52,7 @@ function logout() {
 
   return (
     <div className="App">
-      <button onClick={register}>Register</button>
-      <button onClick={login}>Login</button>
-      <button onClick={logout}>Logout</button>
-      {loading ? 'loading...' : user.email}
+            <Home />
     </div>
   );
 }
