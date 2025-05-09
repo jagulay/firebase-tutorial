@@ -7,8 +7,9 @@ import {
   signOut,
   onAuthStateChanged
 } from "firebase/auth";
-import Home from './Home';
-
+import Logo from './assets/Frontend Simplified Logo.853fbda.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [user, setUser] = React.useState({});
@@ -52,7 +53,19 @@ function logout() {
 
   return (
     <div className="App">
-            <Home />
+      <nav>
+        <div className="menu__btn">
+            <FontAwesomeIcon icon={faBars} />
+        </div>
+        <figure>
+            <img src={Logo} className="nav__logo" />
+        </figure>
+        <div className="nav__btns">
+            <button className="login__btn" onClick={login}>Login</button>
+            <button className="register__btn" onClick={register}>Register</button>
+            <button className="signed-in__btn" onclick={logout}>{user.email[0].toUpperCase()}</button>
+        </div>
+      </nav>
     </div>
   );
 }

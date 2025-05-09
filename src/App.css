@@ -1,9 +1,47 @@
 nav {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 
 .nav__logo {
     max-width: 200px;
+}
+
+.menu__btn{
+    display:none;
+}
+
+.nav__btns {
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+}
+
+button {
+    width: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+}
+
+.login__btn {
+    background-color: white;
+}
+
+.register__btn,
+.signed-in__btn {
+    background-color: rgb(124, 29, 197);
+    color: white;
+}
+
+.register__btn {
+    border-radius: 5px;
+}
+
+.signed-in__btn {
+    border-radius: 50%;
+    width: 40px;
 }
 
